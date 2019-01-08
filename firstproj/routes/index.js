@@ -7,8 +7,9 @@ var router = express.Router();
 // });
 
 router.get('/', function(req, res, next) {
-  res.end({ title: 'Express' });
-});
+  // res.setHeader('Access-Control-Allow-Origin','*')
+  res.send(JSON.stringify({ title: 'Express' }));
+}); 
 
 
 module.exports = router;
