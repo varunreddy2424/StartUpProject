@@ -1,0 +1,22 @@
+{
+  "name": "expressp",
+  "version": "1.0.0",
+  "description": "Learing git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varunreddy2424/StartUpProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varunreddy2424/StartUpProject/issues"
+  },
+  "homepage": "https://github.com/varunreddy2424/StartUpProject#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
