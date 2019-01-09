@@ -8,7 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-
+  dummy_arr =  { 'firstname': 'uday',
+    'lastname': 'h',
+    'street': '#home',
+    'zip': '877',
+    'city': 'bangalore'
+};
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -19,7 +24,6 @@ export class AppComponent implements OnInit {
 
   logForm(value: any) {
     console.log('LogForms fired..');
-    
     this.http.post('http://localhost:3000/users/info', value).subscribe(result => {
       console.log('Logged');
     });
