@@ -4,21 +4,47 @@
     Welcome to {{ title }} Got!
   </h1>
 </div>
-<form #form="ngForm" (ngSubmit)="logForm(form.value)">
-  <label>Firstname:</label>
-  <input type="text" name="firstname" ngModel>
+<div>
+  <form #form="ngForm" (ngSubmit)="logForm(form.value)">
+    <label>Firstname:</label>
+    <input type="text" name="firstname" ngModel>
 
-  <label>Lastname:</label>
-  <input type="text" name="lastname" ngModel>
+    <label>Lastname:</label>
+    <input type="text" name="lastname" ngModel>
 
-  <label>Street:</label>
-  <input type="text" name="street" ngModel>
+    <label>Street:</label>
+    <input type="text" name="street" ngModel>
 
-  <label>Zip:</label>
-  <input type="text" name="zip" ngModel>
+    <label>Zip:</label>
+    <input type="text" name="zip" ngModel>
 
-  <label>City:</label>
-  <input type="text" name="city" ngModel>
+    <label>City:</label>
+    <input type="text" name="city" ngModel>
 
-  <button type="submit">Submit</button>
-</form>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div>
+  <button (click)='getUsers()'>Fetch Users</button>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Street</th>
+      <th>Zip</th>
+      <th>City</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor = "let user of users">
+      <td>{{ user.firstname}}</td>
+      <td>{{ user.lastname}}</td>
+      <td>{{ user.street}}</td>
+      <td>{{ user.zip}}</td>
+      <td>{{ user.city}}</td>
+      <td><img width="40" height="40" src="../../assets/images/delete.png" alt=""></td>
+    </tr>
+  </table>
+  
+</div>

@@ -14,11 +14,16 @@ export class AppComponent implements OnInit {
     'zip': '877',
     'city': 'bangalore'
 };
+  users: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000').subscribe(result => {
-      console.log(result);
+    // this.http.get('http://localhost:3000').subscribe(result => {
+    //   console.log(result);
+    // });
+    this.http.get('http://localhost:3000/users/allusers').subscribe(data => {
+      console.log(data);
+      this.users = data;
     });
   }
 
@@ -27,10 +32,10 @@ export class AppComponent implements OnInit {
     this.http.post('http://localhost:3000/users/info', value).subscribe(result => {
       console.log('Logged');
     });
-
-    // this.http.post('http://localhost:3000/users/info', {}).subscribe(result => {
-    //   console.log('Logged');
-    // });
     console.log(value);
+  }
+
+  getUsers() {
+    console.log('Fetching all users');
   }
 }
