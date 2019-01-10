@@ -1,2 +1,2 @@
 # StartUpProject
-Learing git
+Learing git with angular and express with mongodb
