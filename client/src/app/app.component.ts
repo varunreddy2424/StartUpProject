@@ -35,7 +35,10 @@ export class AppComponent implements OnInit {
     console.log(value);
   }
 
-  getUsers() {
-    console.log('Fetching all users');
+  delete(id) {
+    console.log('Lets Delete user', id);
+    this.http.get('http://localhost:3000/users/delete/' + id).subscribe(result => {
+      console.log('Deleted..!');
+    });
   }
 }

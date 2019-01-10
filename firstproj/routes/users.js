@@ -37,6 +37,10 @@ router.get('/allusers', function(req, res) {
       db.close();
     });
   });
+});
+
+router.get('/delete/:id', function(req, res) {
+  console.log('Server side ready to delete', req.params.id);
 })
 
 module.exports = router;

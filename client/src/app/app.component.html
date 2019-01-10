@@ -43,7 +43,7 @@
       <td>{{ user.street}}</td>
       <td>{{ user.zip}}</td>
       <td>{{ user.city}}</td>
-      <td><img width="40" height="40" src="../../assets/images/delete.png" alt=""></td>
+      <td><img (click)="delete(user._id)" width="40" height="40" src="../../assets/images/delete.png" alt=""></td>
     </tr>
   </table>
   
